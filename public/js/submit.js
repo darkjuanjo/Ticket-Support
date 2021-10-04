@@ -1,6 +1,5 @@
 async function SubmitFormHandler(event) {
     let title = $('#title').val();
-    let user = 1;
     let content = $('#description').val().trim();
     let category = $('#options').val();
     let status = 'pending';
