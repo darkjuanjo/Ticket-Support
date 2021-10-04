@@ -48,7 +48,7 @@ router.post('/', (req, res) => {
     category: req.body.category,
     content: req.body.content,
     status: req.body.status,
-    UserId: req.body.user
+    UserId: req.session.passport.user
   })
     .then(dbUserData => res.json(dbUserData))
     .catch(err => {

@@ -13,8 +13,7 @@ async function SubmitFormHandler(event) {
           title,
           category,
           content,
-          status,
-          user
+          status
         }),
         headers: { 'Content-Type': 'application/json' }
       });
