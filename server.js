@@ -10,7 +10,7 @@ const initializePassport = require('./config/passport-config');
 const sequelize = require('./config/connection');
 
 
-const PORT = process.env.PORT || 3006;
+const PORT = process.env.PORT || 3001;
 const app = express();
 app.use(express.static(path.join(__dirname, 'public')));
 
