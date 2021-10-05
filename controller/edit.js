@@ -8,7 +8,6 @@ router.get('/:id', isloggedIn, (req, res) => {
             id: req.params.id
         }
     }).then(dbData => {
-        console.log(dbData);
         const ticket = dbData.dataValues;
         res.render('edit', ticket);
     }).catch(err => {
