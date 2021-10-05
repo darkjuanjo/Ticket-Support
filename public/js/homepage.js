@@ -22,8 +22,8 @@ $('.delete-btn').on('click', deleteTicketHandler);
 async function editTicketHandler() {
 
   const btnvalue = $(this).data('editid');
-  // console.log(`clicked: ${btnvalue}`)
-  window.location.href = `/edit`;
+  console.log(`clicked: ${btnvalue}`)
+  window.location.href = `/edit/${btnvalue}`;
 }
 
 $('.edit-btn').on('click', editTicketHandler);

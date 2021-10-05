@@ -1,39 +1,46 @@
 :root {
-    --primary-color: #fce138;
-    --secondary-color: #024e76;
-    --tertiary-color: #39a6b2;
-  
-  }
-
-.drop-down {
-    margin: 20px 0 20px 20px;
-    display: flex;
-    flex-wrap: row;
-    width: 10%;
-    border-radius: 10px;
-  }
+  --primary-color: #fce138;
+  --secondary-color: #024e76;
+  --tertiary-color: #39a6b2;
+}
 
 body {
-    background-image: linear-gradient(135deg,rgb(20, 20, 20), rgb(60, 60, 60));
+  background-image: linear-gradient(135deg, rgb(20, 20, 20), rgb(60, 60, 60));
 }
 
 label {
   margin-left: 20px;
-  color:#F5F5F5;
+  color: #F5F5F5;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 10%;
+  width: 100%;
+}
+
+.drop-down {
+  margin: 20px 0 20px 20px;
+  display: flex;
+  flex-wrap: row;
+  width: 10%;
+  border-radius: 10px;
 }
 
 .contact-form input, .contact-form textarea {
-    border: 1px solid var(--secondary-color);
-    display: block;
-    padding: 7px 15px;
-    font-size: 16px;
-    color: var(--secondary-color);
-    width: 20%;
-    margin-bottom: 15px;
-    margin-top: 5px;
-    border-radius: 10px;
-    background-color: rgba(255,255,255, 0.75);
-  }
+  border: 1px solid var(--secondary-color);
+  display: block;
+  padding: 7px 15px;
+  font-size: 16px;
+  color: var(--secondary-color);
+  width: 20%;
+  margin-bottom: 15px;
+  margin-top: 5px;
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.75);
+}
 
 .contact-form input {
   margin-left: 20px;
@@ -42,109 +49,110 @@ label {
 .contact-form textarea {
   margin-left: 20px;
   height: 150px;
-  }
+}
 
 .contact-form input:focus, .contact-form textarea:focus {
-    background-color: rgba(255,255,255, 1);
-    outline: none;
-  }
+  background-color: rgba(255, 255, 255, 1);
+  outline: none;
+}
+
 .contact-form button {
-    width: 10%;
+  width: 10%;
+  margin-left: 20px;
+  /* margin-bottom: 500px; */
+  border: none;
+  background: rgb(211, 210, 210);
+  color: var(--secondary-color);
+  text-align: center;
+  padding: 15px 0;
+  font-size: 16px;
+  border-radius: 10px;
+}
+
+.contact-form button:hover {
+  color: var(--primary-color);
+  background: var(--tertiary-color);
+}
+
+@media screen and (max-width: 1280px) {
+  .contact-form textarea {
     margin-left: 20px;
-    /* margin-bottom: 500px; */
-    border: none;
-    background: rgb(211, 210, 210);
-    color: var(--secondary-color);
-    text-align: center;
-    padding: 15px 0;
-    font-size: 16px;
+    height: 150px;
+    width: 30%;
+  }
+  .contact-form input {
+    margin-left: 20px;
+    width: 30%;
+  }
+  .contact-form button {
+    width: 15%;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .drop-down {
+    margin: 20px 0 20px 20px;
+    display: flex;
+    flex-wrap: row;
+    width: 25%;
     border-radius: 10px;
   }
-  
-.contact-form button:hover {
-    color: var(--primary-color);
-    background: var(--tertiary-color);
+
+  .contact-form textarea {
+    margin-left: 20px;
+    height: 150px;
+    width: 50%;
+  }
+  .contact-form input {
+    margin-left: 20px;
+    width: 50%;
+  }
+  .contact-form button {
+    width: 25%;
+  }
+}
+
+@media screen and (max-width: 575px) {
+  .drop-down {
+    margin: 20px 0 20px 20px;
+    display: flex;
+    flex-wrap: row;
+    width: 50%;
+    border-radius: 10px;
   }
 
-  @media screen and (max-width: 1280px) { 
-    .contact-form textarea {
-      margin-left: 20px;
-      height: 150px;
-      width: 30%;
-      }
-
-      .contact-form input {
-        margin-left: 20px;
-        width: 30%;
-      }
-
-      .contact-form button {
-        width: 15%;
-      }
+  .contact-form textarea {
+    margin-left: 20px;
+    height: 150px;
+    width: 85%;
   }
-
-  @media screen and (max-width: 1024px) { 
-    .contact-form textarea {
-      margin-left: 20px;
-      height: 150px;
-      width: 50%;
-      }
-
-      .contact-form input {
-        margin-left: 20px;
-        width: 50%;
-      }
-      .contact-form button {
-        width: 25%;
-      }
+  .contact-form input {
+    margin-left: 20px;
+    width: 85%;
   }
-
-  @media screen and (max-width: 575px) { 
-
-    .drop-down {
-      margin: 20px 0 20px 20px;
-      display: flex;
-      flex-wrap: row;
-      width: 50%;
-      border-radius: 10px;
-    }
-    .contact-form textarea {
-      margin-left: 20px;
-      height: 150px;
-      width: 85%;
-      }
-
-      .contact-form input {
-        margin-left: 20px;
-        width: 85%;
-      }
-
-      .contact-form button {
-        width: 50%;
-      }
+  .contact-form button {
+    width: 50%;
   }
+}
 
-  @media screen and (max-width: 320px) { 
-
-    .drop-down {
-      margin: 20px 0 20px 20px;
-      display: flex;
-      flex-wrap: row;
-      width: 50%;
-      border-radius: 10px;
-    }
-    .contact-form textarea {
-      margin-left: 20px;
-      height: 150px;
-      width: 85%;
-      }
-
-      .contact-form input {
-        margin-left: 20px;
-        width: 85%;
-      }
-
-      .contact-form button {
-        width: 50%;
-      }
+@media screen and (max-width: 320px) {
+  .drop-down {
+    margin: 20px 0 20px 20px;
+    display: flex;
+    flex-wrap: row;
+    width: 50%;
+    border-radius: 10px;
   }
+  .contact-form textarea {
+    margin-left: 20px;
+    height: 150px;
+    width: 85%;
+  }
+  .contact-form input {
+    margin-left: 20px;
+    width: 85%;
+  }
+  .contact-form button {
+    width: 50%;
+  }
+}
