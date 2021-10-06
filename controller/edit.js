@@ -2,10 +2,18 @@ const { isloggedIn } = require('../helpers/auth');
 const { Ticket } = require('../Models');
 const router = require('express').Router();
 
-// edit doesn't work so for now will be commented out//
-// router.get('/', isloggedIn, (req, res) => {
-//     // const id = req.params.id;
-//     res.render('edit', {id: 16});
-// });
+router.get('/:id', isloggedIn, (req, res) => {
+    Ticket.findOne({
+        where: {
+            id: req.params.id
+        }
+    }).then(dbData => {
+        console.log(dbData);
+        const ticket = dbData.dataValues;
+        res.render('edit', ticket);
+    }).catch(err => {
+        res.status(500).json(err);
+    });
+});
 
 module.exports = router;

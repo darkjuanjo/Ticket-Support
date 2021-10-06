@@ -1,11 +1,12 @@
-{{!-- edit doesn't work for now will fix in the future --}}
+<link rel="stylesheet" href="/css/submit.css">
+
 <div class="header">
-    <a href="./homepage">
+    <a href="/homepage">
         <h1>Ticket Support</h1>
     </a>
     <div>
         <ul>
-            <li>
+            <li class="questions">
                 <p>Questions? Call 1-800-567-2234</p>
             </li>
         </ul>
@@ -14,20 +15,21 @@
 <div class="contact-form">
     <form id="form" data-id="{{id}}">
         <select class="drop-down" id="options">
-            <option value="Software">Software</option>
-            <option value="Hardware">Hardware</option>
-            <option value="User Authentication">User Authentication</option>
-            <option value="Utilites">Utilites</option>
-            <option value="Network">Network</option>
+            {{!-- <option value="none"></option> --}}
+            <option value="Software" {{{select category 'software'}}}>Software</option>
+            <option value="Hardware" {{{select category 'Hardware'}}}>Hardware</option>
+            <option value="User Authentication" {{{select category 'User Authentication'}}}>User Authentication</option>
+            <option value="Utilites" {{{select category 'Utilites'}}}>Utilites</option>
+            <option value="Network" {{{select category 'Network'}}}>Network</option>
         </select>
 
         <label for="title">Enter a title</label>
-        <input type="text" id="title" placeholder="Title" />
+        <input type="text" id="title" placeholder="{{title}}" />
 
         <label for="description">Enter your description</label>
-        <textarea id="description" placeholder="Give a detailed description"></textarea>
+        <textarea id="description" placeholder="{{content}}"></textarea>
 
         <button type="button" id="submit">Submit</button>
     </form>
 </div>
-<script src="./js/edit.js"></script>
+<script src="/js/submit.js"></script>
