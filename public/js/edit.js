@@ -1,4 +1,4 @@
-async function SubmitFormHandler(event) {
+async function SubmitFormHandler() {
   const title = $('#title').val();
   const content = $('#description').val().trim();
   const category = $('#options').val();

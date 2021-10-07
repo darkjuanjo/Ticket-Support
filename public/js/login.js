@@ -1,5 +1,4 @@
 async function logInFormHandler() {
-
   const username = $('#username-login').val().trim();
   const password = $('#password-login').val().trim();
 
@@ -14,7 +13,6 @@ async function logInFormHandler() {
     });
     console.log(username, password);
     console.log(response, 'login submitted');
-    window.location.reload();
   }
 }
 
@@ -40,9 +38,10 @@ async function registerFormHandler() {
       headers: { 'Content-Type': 'application/json' }
     });
     console.log(response);
-    window.location.reload();
   }
 }
+
+$('#sign-up').on('submit', logInFormHandler);
 
 /*code to add possible live checks for username and password*/
 // async function newAccountCheckHandler() {
